@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;500;800&display=swap');
+
+/* CONFIG. GERAIS ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--back-color);
+}
+
+h1,
+h3,
+h4 {
+    font-weight: 400;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--color-c);
+}
+
+p,
+a,
+li {
+    color: var(--color-b);
+    font-weight: 300;
+    font-family: 'DM Sans', sans-serif;
+
+}
+
+p {
+    font-weight: 200;
+    color: var(--text-color);
+}
+
+b {
+    font-weight: 500;
+}
+
+:root {
+    --text-color: #f0f8ff;
+    --back-color: #1B1B1B;
+    --color-a: #CBA135;
+    --color-b: #FFCC33;
+    --color-c: #D4AF37;
+}
+
+/* HEADER ================= */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    width: 100%;
+    padding: 2rem 4rem;
+    color: var(--color-b);
+    background-color: #0e0d0d;
+    position: fixed;
+    z-index: 10;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header h1 {
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+header img {
+    width: 50px;
+    margin-right: 0.5rem;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.5s;
+    height: 6rem;
+}
+
+header a:hover {
+    color: var(--back-color);
+    background-color: #CBA135;
+}
+
+/* SEÇÕES ======================= */
+section {
+    margin: 2rem;
+    padding: 2rem;
+    scroll-snap-align: center;
+}
+
+/* -------------------------------- */
+.inicio {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: 400px;
+    margin-top: 8rem;
+    width: fit-content;
+}
+
+.inicio img {
+    height: 100%;
+    object-fit: cover;
+    margin-right: 2rem;
+    opacity: 0;
+    animation: slideImg 1.5s ease-in-out forwards;
+}
+
+.inicio div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inicio div h1 {
+    font-size: 48px;
+    margin-bottom: .25rem;
+    opacity: 0;
+    animation: slideTxt 1s ease-in-out forwards;
+}
+
+.inicio div h3 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    color: var(--color-a);
+    opacity: 0;
+    animation: slideTxt 1s 0.3s ease-in-out forwards;
+}
+
+.inicio div p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideTxt 1s 0.6s ease-in-out forwards;
+}
+
+/* Animações */
+
+@keyframes slideImg {
+    0% {
+        transform: translateX(-20%);
+    }
+
+    60% {
+        transform: translateX(2%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTxt {
+    0% {
+        transform: translatey(-10%);
+    }
+
+    100% {
+        transform: translatey(0%);
+        opacity: 1;
+    }
+}
+
+/* -------------------------------- */
+
+.sec1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background-color: rgb(14, 13, 13, 0.8);
+    background-image: url(sec2-img.jpg);
+    background-blend-mode: multiply;
+}
+
+.sec1 h3 {
+    font-size: 28px;
+    margin-bottom: .5rem;
+}
+
+.sec1 p {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+/* -------------------------------- */
+.sec2 {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.sec2 div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.sec2 h3 {
+    font-size: 28px;
+    margin-bottom: .5rem;
+}
+
+.sec2 p {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.sec2 img {
+    margin-left: 2rem;
+    width: 50%;
+    object-position: left;
+    object-fit: cover;
+}
+
+/* S-3 -------------------------------- */
+.sec3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.sec3 h3 {
+    font-size: 28px;
+    margin-bottom: .5rem;
+}
+
+.sec3 h4 {
+    font-size: 22px;
+    margin-bottom: .5rem;
+}
+
+.sec3 p {
+    font-size: 20px;
+}
+
+.sec3 div {
+    background-color: rgb(10, 10, 10);
+    text-indent: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sec3 ol {
+    list-style-position: inside;
+}
+
+.sec3 li {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.sec3 ol p {
+    margin-bottom: 1rem;
+}
+
+.var {
+    font-weight: 300;
+    color: brown;
+}
+
+.string {
+    font-weight: 300;
+    color: rgb(117, 117, 58);
+}
+
+/* S-4 -------------------------------- */
+.sec4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+.sec4 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+}
+
+.sec4 h3 {
+    font-size: 28px;
+    margin-bottom: .5rem;
+}
+
+.sec4 p {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.sec4 img {
+    margin-bottom: 2rem;
+    width: 50%;
+    object-fit: cover;
+}
+
+.sec4 a {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--back-color);
+    background-color: var(--color-a);
+    padding: .75rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.sec4 a:hover {
+    background-color: var(--color-b);
+}
+
+
+/* FOOTER ========================= */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: aliceblue;
+    margin-top: auto;
+    height: fit-content;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #0e0d0d;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+}
+
+footer div p{
+    color: lightslategrey;
+}
+
+footer a {
+    color: lightslategrey;
+    text-decoration: none;
+    font-style: italic;
+    margin: 0 .25rem;
+}
+
+footer a:hover {
+    color: rgb(59, 59, 59);
+}
